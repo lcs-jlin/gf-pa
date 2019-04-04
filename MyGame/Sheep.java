@@ -28,12 +28,27 @@ public class Sheep extends Actor
     {
         if (Greenfoot.isKeyDown("left"))
         { 
-            turn(-5);
+            setRotation(180);
+            move(2);
 
         }
-        if (Greenfoot.isKeyDown("right"))
-        {
-            turn(5);
+       if (Greenfoot.isKeyDown("right"))
+        { 
+            setRotation(0);
+            move(2);
+
+        }
+        if (Greenfoot.isKeyDown("up"))
+        { 
+            setRotation(270);
+            move(2);
+
+        }
+        if (Greenfoot.isKeyDown("down"))
+        { 
+            setRotation(90);
+            move(2);
+
         }
     }
 }
