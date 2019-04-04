@@ -82,5 +82,7 @@ public class Background extends World
         addObject(strawberry20,186,306);
         strawberry19.setLocation(400,312);
         sheep.setLocation(291,301);
+        
+        
     }
 }

@@ -28,12 +28,12 @@ public class Sheep extends Actor
     {
         if (Greenfoot.isKeyDown("left"))
         { 
-            turn(-4);
+            turn(-5);
 
         }
         if (Greenfoot.isKeyDown("right"))
         {
-            turn(4);
+            turn(5);
         }
     }
 }

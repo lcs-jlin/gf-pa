@@ -26,6 +26,7 @@ public class Lemur extends Actor
         if ( isTouching(Sheep.class) );
         {
             removeTouching(Sheep.class);
+            
         }
     }
 
