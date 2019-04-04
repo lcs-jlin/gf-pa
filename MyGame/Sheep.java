@@ -1,3 +1,4 @@
+
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
@@ -14,7 +15,25 @@ public class Sheep extends Actor
      */
     public void act() 
     {
-     
-        
+        checkKeypress();
+        move(5);
+        if ( isTouching(Strawberry.class) );
+        {
+            removeTouching(Strawberry.class);
+        }
+
     }    
+
+    public void checkKeypress()
+    {
+        if (Greenfoot.isKeyDown("left"))
+        { 
+            turn(-4);
+
+        }
+        if (Greenfoot.isKeyDown("right"))
+        {
+            turn(4);
+        }
+    }
 }

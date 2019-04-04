@@ -22,7 +22,7 @@ public class Lemur extends Actor
         {
             turn(Greenfoot.getRandomNumber(90)-45);
         }
-        move(8);
+        move(4);
         if ( isTouching(Sheep.class) );
         {
             removeTouching(Sheep.class);
