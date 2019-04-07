@@ -50,5 +50,6 @@ public class Sheep extends Actor
             move(2);
 
         }
+        
     }
 }

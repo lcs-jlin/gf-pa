@@ -8,6 +8,10 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class Background extends World
 {
+    private boolean gameOn;
+    private int score;
+    
+    
 
     /**
      * Constructor for objects of class background.
@@ -18,8 +22,11 @@ public class Background extends World
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
         super(600, 600, 1); 
         prepare();
+        
+        
+        gameOn = false;
     }
-    
+
     /**
      * Prepare the world for the start of the program.
      * That is: create the initial objects and add them to the world.
@@ -82,7 +89,36 @@ public class Background extends World
         addObject(strawberry20,186,306);
         strawberry19.setLocation(400,312);
         sheep.setLocation(291,301);
+    }
+
+    /**
+     * Displays the score on the screen
+     */
+    private void showScore()
+    {
+        showText("Score: " + score, 100, 100);
+    }
+
+    private void startGame()
+    {
+        gameOn = true;
+        score = 0;
         
         
     }
+
+    private void showResults()
+    {
+        showText("GAME OVER", 300, 300);
+    }
+    public boolean isGameOn()
+    {
+        return gameOn;
+    }
+    public void changeScoreBy(int thisMuch)
+    {
+        score += thisMuch;
+        showScore();
+    }
 }
+
